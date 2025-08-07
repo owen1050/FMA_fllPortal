@@ -1,0 +1,38 @@
+
+C:\Server\FMA_fllPortal>waitress-serve server:app 
+
+C:\Server\FMA_fllPortal>waitress-serve server:app 
+
+C:\Server\FMA_fllPortal>waitress-serve server:app 
+
+C:\Server\FMA_fllPortal>waitress-serve server:app 
+
+C:\Server\FMA_fllPortal>waitress-serve server:app 
+
+C:\Server\FMA_fllPortal>waitress-serve server:app 
+
+C:\Server\FMA_fllPortal>waitress-serve server:app 
+
+C:\Server\FMA_fllPortal>waitress-serve server:app 
+
+C:\Server\FMA_fllPortal>waitress-serve server:app 
+
+C:\Server\FMA_fllPortal>waitress-serve server:app 
+
+C:\Server\FMA_fllPortal>waitress-serve server:app 
+
+C:\Server\FMA_fllPortal>waitress-serve server:app 
+
+C:\Server\FMA_fllPortal>waitress-serve server:app 
+
+C:\Server\FMA_fllPortal>waitress-serve server:app 
+
+C:\Server\FMA_fllPortal>waitress-serve server:app 
+
+C:\Server\FMA_fllPortal>waitress-serve server:app 
+
+C:\Server\FMA_fllPortal>waitress-serve server:app 
+
+C:\Server\FMA_fllPortal>waitress-serve server:app 
+
+C:\Server\FMA_fllPortal>waitress-serve server:app 
