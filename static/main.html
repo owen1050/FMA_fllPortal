@@ -1,3 +1,42 @@
-One day, this will work. 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mid Atlantic Robotics FLL Portal</title>
+  <link rel="stylesheet" href="main.css" />
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Mid Atlantic Robotics FLL Portal</h1>
+  </header>
 
-O Captain My Captain
+  <main>
+    <div class="form-card">
+      <h2>Event Registration</h2>
+      <form id="eventForm">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+        <label for="teamNumber">Team Number</label>
+        <input type="number" id="teamNumber" name="teamNumber" placeholder="12345" required>
+
+        <label for="pref1">Event Preference 1</label>
+        <select id="pref1" name="pref1" required></select>
+
+        <label for="pref2">Event Preference 2</label>
+        <select id="pref2" name="pref2" required></select>
+
+        <label for="pref3">Event Preference 3</label>
+        <select id="pref3" name="pref3" required></select>
+
+        <label for="pref4">Event Preference 4</label>
+        <select id="pref4" name="pref4" required></select>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
