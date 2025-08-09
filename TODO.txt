@@ -1,0 +1,4 @@
+Setup SQLLite
+Save each response in DB
+do event selection
+Add hashes to db and do check in front end
