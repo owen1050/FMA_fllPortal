@@ -1,42 +1,72 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mid Atlantic Robotics FLL Portal</title>
-  <link rel="stylesheet" href="main.css" />
-  <script src="main.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mid Atlantic Robotics FLL Portal</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Mid Atlantic Robotics FLL Portal</h1>
-  </header>
+    <header>
+        <h1>Mid Atlantic Robotics FLL Portal</h1>
+    </header>
 
-  <main>
-    <div class="form-card">
-      <h2>Event Registration</h2>
-      <form id="eventForm">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+    <main>
+        <form id="fllForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-        <label for="teamNumber">Team Number</label>
-        <input type="number" id="teamNumber" name="teamNumber" placeholder="12345" required>
+            <div id="teamNumbersContainer">
+                <label>Team Number(s):</label>
+                <div class="team-number-row">
+                    <input type="number" name="teamNumbers[]" placeholder="Enter team number" required>
+                    <button type="button" class="remove-team" onclick="removeTeam(this)">Remove</button>
+                </div>
+            </div>
+            <button type="button" id="addTeamBtn">Add Another Team</button>
 
-        <label for="pref1">Event Preference 1</label>
-        <select id="pref1" name="pref1" required></select>
+            <label for="event1">Event Preference 1:</label>
+            <select id="event1" name="event1">
+                <option value="">-- Select an event --</option>
+                <option value="Event A">Event A</option>
+                <option value="Event B">Event B</option>
+                <option value="Event C">Event C</option>
+                <option value="Event D">Event D</option>
+            </select>
 
-        <label for="pref2">Event Preference 2</label>
-        <select id="pref2" name="pref2" required></select>
+            <label for="event2">Event Preference 2:</label>
+            <select id="event2" name="event2">
+                <option value="">-- Select an event --</option>
+                <option value="Event A">Event A</option>
+                <option value="Event B">Event B</option>
+                <option value="Event C">Event C</option>
+                <option value="Event D">Event D</option>
+            </select>
 
-        <label for="pref3">Event Preference 3</label>
-        <select id="pref3" name="pref3" required></select>
+            <label for="event3">Event Preference 3:</label>
+            <select id="event3" name="event3">
+                <option value="">-- Select an event --</option>
+                <option value="Event A">Event A</option>
+                <option value="Event B">Event B</option>
+                <option value="Event C">Event C</option>
+                <option value="Event D">Event D</option>
+            </select>
 
-        <label for="pref4">Event Preference 4</label>
-        <select id="pref4" name="pref4" required></select>
+            <label for="event4">Event Preference 4:</label>
+            <select id="event4" name="event4">
+                <option value="">-- Select an event --</option>
+                <option value="Event A">Event A</option>
+                <option value="Event B">Event B</option>
+                <option value="Event C">Event C</option>
+                <option value="Event D">Event D</option>
+            </select>
 
-        <button type="button" onclick="submitForm()">Submit</button>
-      </form>
-    </div>
-  </main>
+            <label for="transactionHash">Payment Transaction Hash:</label>
+            <input type="text" id="transactionHash" name="transactionHash" placeholder="Enter transaction hash">
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
 </body>
 </html>

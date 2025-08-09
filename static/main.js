@@ -1,43 +1,45 @@
-// Event list in one place
-const events = [
-  "Event A - Philadelphia",
-  "Event B - Trenton",
-  "Event C - Wilmington",
-  "Event D - Harrisburg",
-  "Event E - Baltimore"
-];
+document.getElementById("addTeamBtn").addEventListener("click", function() {
+    const container = document.getElementById("teamNumbersContainer");
+    const row = document.createElement("div");
+    row.classList.add("team-number-row");
 
-// Populate dropdowns on page load
-document.addEventListener("DOMContentLoaded", () => {
-  const selects = ["pref1", "pref2", "pref3", "pref4"];
+    const input = document.createElement("input");
+    input.type = "number";
+    input.name = "teamNumbers[]";
+    input.placeholder = "Enter team number";
+    input.required = true;
 
-  selects.forEach(selectId => {
-    const selectElement = document.getElementById(selectId);
-    selectElement.innerHTML = `<option value="">-- Select an Event --</option>`; // default
+    const removeBtn = document.createElement("button");
+    removeBtn.type = "button";
+    removeBtn.classList.add("remove-team");
+    removeBtn.textContent = "Remove";
+    removeBtn.onclick = function() {
+        removeTeam(removeBtn);
+    };
 
-    events.forEach(eventName => {
-      const option = document.createElement("option");
-      option.value = eventName;
-      option.textContent = eventName;
-      selectElement.appendChild(option);
-    });
-  });
+    row.appendChild(input);
+    row.appendChild(removeBtn);
+    container.appendChild(row);
 });
 
-function submitForm() {
-  const email = document.getElementById("email").value;
-  const teamNumber = document.getElementById("teamNumber").value;
-  const prefs = [
-    document.getElementById("pref1").value,
-    document.getElementById("pref2").value,
-    document.getElementById("pref3").value,
-    document.getElementById("pref4").value
-  ];
-
-  console.log("Form Submitted:");
-  console.log("Email:", email);
-  console.log("Team Number:", teamNumber);
-  console.log("Preferences:", prefs);
-
-  alert("Form submitted successfully!");
+function removeTeam(button) {
+    button.parentElement.remove();
 }
+
+document.getElementById("fllForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(this);
+    const values = {};
+
+    for (const [key, value] of formData.entries()) {
+        if (key === "teamNumbers[]") {
+            if (!values.teamNumbers) values.teamNumbers = [];
+            values.teamNumbers.push(value);
+        } else {
+            values[key] = value;
+        }
+    }
+
+    console.log("Form Submission Data:", values);
+});
